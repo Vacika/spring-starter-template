@@ -49,10 +49,22 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<!-- Used for generating endpoint documentation -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.1.0</version>
+		</dependency>
 		<!-- Used for logging -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-log4j2</artifactId>
+		</dependency>
+		<!-- In-Memory DB, used in local development -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<!-- Used for DB Migrations -->
 		<dependency>
@@ -108,20 +120,16 @@
 			<artifactId>mapstruct</artifactId>
 			<version>1.5.3.Final</version>
 		</dependency>
-		<!-- In-Memory DB, used in local development -->
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
 		<!-- Used for generating boilerplate code -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<dependency>
 
+		<!-- _________________ -->
+		<!-- TEST DEPENDENCIES -->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -133,6 +141,9 @@
 		</dependency>
 	</dependencies>
 
+
+	<!-- _______ -->
+	<!-- PLUGINS -->
 	<build>
 		<plugins>
 			<plugin>
